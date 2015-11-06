@@ -63,6 +63,10 @@
     'name': 'constant.numeric.integer.decimal.gdscript'
   }
   {
+    'match': '\\b(null|true|false)\\b'
+    'name': 'constant.language.gdscript'
+  }
+  {
     'captures':
       '1':
         'name': 'storage.modifier.global.gdscript'
@@ -73,6 +77,24 @@
       '1':
         'name': 'storage.modifier.nonlocal.gdscript'
     'match': '\\b(nonlocal)\\b'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'storage.modifier.const.gdscript'
+    'match': '\\b(const)\\b'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'keyword.control.signal.gdscript'
+    'match': '\\b(signal)\\b'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'keyword.control.export.gdscript'
+    'match': '\\b(export)\\b'
   }
   {
     'captures':
@@ -94,11 +116,6 @@
     'comment': 'keywords that delimit flow conditionals'
     'name': 'keyword.control.conditional.gdscript'
     'match': '\\b(if|elif|else)\\b'
-  }
-  {
-    'comment': 'keywords that delimit an exception'
-    'name': 'keyword.control.exception.gdscript'
-    'match': '\\b(except|finally|try|raise)\\b'
   }
   {
     'comment': 'keywords that delimit loops'
@@ -548,10 +565,6 @@
   }
   {
     'include': '#language_variables'
-  }
-  {
-    'match': '\\b(None|True|False|Ellipsis|NotImplemented)\\b'
-    'name': 'constant.language.gdscript'
   }
   {
     'include': '#string_quoted_single'
